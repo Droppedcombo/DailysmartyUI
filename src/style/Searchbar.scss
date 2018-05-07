@@ -21,7 +21,9 @@ $color-gray-one: #666666;
 
         &::placeholder {
             color: #B3B3B3;
-            
+            font-family: "Font Awesome\ 5 free","lato, arial, sans-sarif";
+            font-weight: 600;
+
         }
 
         &:focus {
