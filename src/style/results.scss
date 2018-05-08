@@ -1,0 +1,59 @@
+.results {
+  @include default-page-layout();
+
+  margin-top: 52px;
+  grid-row-gap: 44px;
+}
+
+.results-posts {
+   // display: grid;
+   // grid-row-gap: 21px;
+
+    .results-posts__wrapper {
+        .results-posts_posts {
+            display: grid;
+            grid-row-gap: 20px;
+            justify-content: stretch;
+        }
+    }
+}
+
+.result-post {
+    display: grid;
+    align-content: space-around;
+    grid-row-gap: 22px;
+
+    .results-post__topics > * {
+        color: $color-blue-primary;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: normal;
+    }
+
+    .result-post__title a {
+        color: $color-gray-one; 
+    }
+
+    .result-post__links {
+        //display: flex;
+    }
+}
+
+.post-link {
+    min-height: 70px;
+    display: flex;
+   
+    &__box {
+        min-width: 70px;
+        background-color: $color-gray-one;
+        margin-right: 60px;
+    }
+
+    &__link a {
+        color: lightgray;
+        font-size: 14px;
+        line-height: 17px;
+
+    }
+}
+
