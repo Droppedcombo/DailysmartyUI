@@ -1,18 +1,18 @@
 .results {
-  @include default-page-layout();
-
-  margin-top: 52px;
-  grid-row-gap: 44px;
+    @include default-page-layout();
+    margin-top: 52px;
+    grid-row-gap: 44px;
 }
 
+
 .results-posts {
-   // display: grid;
-   // grid-row-gap: 21px;
+  
 
     .results-posts__wrapper {
-        .results-posts_posts {
+
+        .results-posts__posts {
             display: grid;
-            grid-row-gap: 20px;
+            grid-row-gap: 21px;
             justify-content: stretch;
         }
     }
@@ -23,21 +23,22 @@
     align-content: space-around;
     grid-row-gap: 22px;
 
-    .results-post__topics > * {
-        color: $color-blue-primary;
+    &__topics > * {
+        color: $color-blue-one;
         font-size: 14px;
-        line-height: 17px;
+        line-height: 14px;
         font-weight: normal;
     }
 
-    .result-post__title a {
-        color: $color-gray-one; 
+    &__title {
+        color: $color-gray-one;
+        font-size: 18px;
+        line-height: 22px;
     }
 
-    .result-post__links {
+    &__links {
         display: flex;
-        //height: 70px;
-       
+        height: 70px;
     }
 }
 
@@ -46,18 +47,16 @@
     display: flex;
     flex-basis: 205px;
     margin-right: 37px;
-   
+    
     &__box {
         min-width: 70px;
-        background-color: $color-gray-one;
-        margin-right: 60px;
+        background-color: lightgrey;
+        margin-right: 16px;
     }
 
     &__link a {
-        color: lightgray;
+        color: $color-gray-one;
         font-size: 14px;
         line-height: 17px;
-
     }
 }
-

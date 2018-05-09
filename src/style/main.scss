@@ -1,11 +1,17 @@
-$color-blue-primary:  #0079ff;
+$color-primary: orange;
 $color-gray-one: #666666;
+$color-blue-one: #0079FF;
 
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 @import './mixins';
-@import './searchbar';
+@import './searchBar';
 @import './recentPosts';
+@import './post';
 @import './results';
 
+
+$color-gray-one: #666666;
 
 
 
@@ -15,29 +21,27 @@ body {
 
 .app-wrapper {
     display: grid;
-    justify-content:  center;
+    justify-content: center;
 }
 
 .home {
     @include default-page-layout();
-} 
+}
 
 .logo-main,
-.recent-posts 
-{
+.recent-posts {
     display: grid;
-    justify-content: center;
+    justify-items: center;
+   
 }
 
 ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-
 }
 
 .no-content {
     color: $color-gray-one;
     font-size: inherit;
-    line-height: 17px;
 }
