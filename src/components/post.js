@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import AnimateHeight from 'react-animate-height';
 
 class Post extends Component {
 
@@ -34,20 +34,21 @@ class Post extends Component {
             res = res.substring(0, res.length -4);
         }
         return res;
-    } 
+    }
 
     renderLinks() {
         let links = this.props.post_links.map((post_link, index) => {
-           return( <div className="post-link" key={index}>
+           return( 
+           <div className="post-link" key={index}>
                 <div className="post-link__box"></div>
                 <div className="post-link__link">
-                <a href={post_link.link_url}>{this.getNameForPostLink(post_link_url)}</a>
+                    <a href={post_link.link_url}>{this.getNameForPostLink(post_link.link_url)}</a>
                 </div>
            </div> )
         })
         if(links ==0) {
             return <div className="no-content"> No post links </div>
-        } 
+        }
      return links;
     }
 
@@ -56,8 +57,7 @@ class Post extends Component {
             return (
             <li className="recent-post">
                 <div className="recent-post__title">
-                <a href={this.props.link}
-                    >{this.props.title}</a>
+                      <a href={this.props.link}>{this.props.title}</a>
                 </div>
                 <div className="recent-post__topics">
                     {this.renderTopics()}
@@ -75,8 +75,8 @@ class Post extends Component {
                         </div>
                         <div className="result-post__title">
                             <a href={this.props.link}
-
-                            >{this.props.title}</a>
+                            >{this.props.title}
+                            </a>
                         </div>
                         <AnimateHeight duration={500} height={this.state.height}>
                         <div className="result-post__links">
