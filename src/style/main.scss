@@ -8,7 +8,6 @@ $color-blue-one: #0079FF;
 @import './searchBar';
 @import './recentPosts';
 @import './post';
-@import './home';
 @import './results';
 
 
@@ -23,6 +22,10 @@ body {
 .app-wrapper {
     display: grid;
     justify-content: center;
+}
+
+.home {
+    @include default-page-layout();
 }
 
 .logo-main,
